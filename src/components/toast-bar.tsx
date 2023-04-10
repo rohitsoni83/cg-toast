@@ -28,8 +28,8 @@ const ToastBarBase = styled("div")`
   pointer-events: auto;
   border-radius: 8px;
   position: relative;
-  font-size: 16px;
-  padding: 10px;
+  font-size: 14px;
+  padding: 6px 8px;
   font-family: "Roboto", sans-serif;
 `;
 
