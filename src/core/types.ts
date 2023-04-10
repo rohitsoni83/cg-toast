@@ -54,7 +54,7 @@ export interface Toast {
   createdAt: number;
   visible: boolean;
   height?: number;
-  customIconColor?: string;
+  iconColor?: string;
 }
 
 export type ToastOptions = Partial<
@@ -69,7 +69,7 @@ export type ToastOptions = Partial<
     | "position"
     | "theme"
     | "progressbar"
-    | "customIconColor"
+    | "iconColor"
   >
 >;
 

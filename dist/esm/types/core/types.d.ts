@@ -24,9 +24,9 @@ export interface Toast {
     createdAt: number;
     visible: boolean;
     height?: number;
-    customIconColor?: string;
+    iconColor?: string;
 }
-export type ToastOptions = Partial<Pick<Toast, "id" | "icon" | "duration" | "ariaProps" | "className" | "style" | "position" | "theme" | "progressbar" | "customIconColor">>;
+export type ToastOptions = Partial<Pick<Toast, "id" | "icon" | "duration" | "ariaProps" | "className" | "style" | "position" | "theme" | "progressbar" | "iconColor">>;
 export type DefaultToastOptions = ToastOptions & {
     [key in ToastType]?: ToastOptions;
 };

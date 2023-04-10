@@ -53,7 +53,7 @@ export const AnimatedIconWrapper = styled("div")`
 export const ToastIcon: React.FC<{
   toast: Toast;
 }> = ({ toast }) => {
-  const { icon, type, theme, customIconColor } = toast;
+  const { icon, type, theme, iconColor } = toast;
 
   if (icon !== undefined) {
     if (typeof icon === "string") {
@@ -74,8 +74,8 @@ export const ToastIcon: React.FC<{
           <i
             className="fa-solid fa-circle-exclamation"
             style={{
-              color: customIconColor
-                ? customIconColor
+              color: iconColor
+                ? iconColor
                 : theme === "coloured"
                 ? "#fff"
                 : "rgb(211, 47, 47)",
@@ -85,8 +85,8 @@ export const ToastIcon: React.FC<{
           <i
             className="fa-solid fa-circle-info"
             style={{
-              color: customIconColor
-                ? customIconColor
+              color: iconColor
+                ? iconColor
                 : theme === "coloured"
                 ? "#fff"
                 : "rgb(2, 136, 209)",
@@ -96,8 +96,8 @@ export const ToastIcon: React.FC<{
           <i
             className="fa-solid fa-triangle-exclamation"
             style={{
-              color: customIconColor
-                ? customIconColor
+              color: iconColor
+                ? iconColor
                 : theme === "coloured"
                 ? "#262626"
                 : "rgb(245, 124, 0)",
@@ -107,8 +107,8 @@ export const ToastIcon: React.FC<{
           <i
             className="fa-solid fa-circle-check"
             style={{
-              color: customIconColor
-                ? customIconColor
+              color: iconColor
+                ? iconColor
                 : theme === "coloured"
                 ? "#fff"
                 : "rgb(56, 142, 60)",
