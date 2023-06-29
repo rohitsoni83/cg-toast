@@ -30,7 +30,7 @@ const createToast = (
   pauseDuration: 0,
   ...opts,
   id: opts?.id || genId(),
-  theme: opts?.theme ? opts.theme : "light",
+  theme: opts?.theme ? opts.theme : "coloured",
   style: {
     backgroundColor: opts?.style?.backgroundColor
       ? opts?.style?.backgroundColor
