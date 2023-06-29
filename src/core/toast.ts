@@ -52,7 +52,23 @@ const createHandler =
     const toast = createToast(
       typeof message === "string" ? message.trim() : message,
       type,
-      { ...options, theme: options?.theme ? options?.theme : "coloured" }
+      {
+        ...options,
+        theme: options?.theme ? options?.theme : "coloured",
+        style: {
+          backgroundColor: options?.style?.backgroundColor
+            ? options?.style?.backgroundColor
+            : options?.theme === "coloured"
+            ? getBackgroundColor(type || "blank")
+            : "#fff",
+          color: options?.style?.color
+            ? options?.style?.color
+            : options?.theme === "coloured"
+            ? "#fff"
+            : "#262626",
+          ...options?.style,
+        },
+      }
     );
     dispatch({ type: ActionType.UPSERT_TOAST, toast });
     return toast.id;
