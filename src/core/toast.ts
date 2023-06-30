@@ -30,7 +30,6 @@ const createToast = (
   pauseDuration: 0,
   ...opts,
   id: opts?.id || genId(),
-  // theme: opts?.theme ? opts.theme : "light",
   style: {
     backgroundColor: opts?.style?.backgroundColor
       ? opts?.style?.backgroundColor
@@ -55,19 +54,6 @@ const createHandler =
       {
         ...options,
         theme: options?.theme ? options?.theme : "coloured",
-        // style: {
-        //   backgroundColor: options?.style?.backgroundColor
-        //     ? options?.style?.backgroundColor
-        //     : options?.theme === "coloured"
-        //     ? getBackgroundColor(type || "blank")
-        //     : "#fff",
-        //   color: options?.style?.color
-        //     ? options?.style?.color
-        //     : options?.theme === "coloured"
-        //     ? "#fff"
-        //     : "#262626",
-        //   ...options?.style,
-        // },
       }
     );
     dispatch({ type: ActionType.UPSERT_TOAST, toast });
